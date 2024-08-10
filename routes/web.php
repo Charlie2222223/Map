@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\Api\RandomTravelController;
+
+// 最初に表示するルート
 Route::get('/', function () {
-    return view('welcome');
+    return view('random_search');
 });
+
+// 地方IDを選択する画面
+Route::get('/', [RandomTravelController::class, 'showRegionSelection']);
+
+// 地方IDに基づいてランダム検索を実行する
+Route::get('/random-search', [RandomTravelController::class, 'getRandomData']);
