@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['zip', 'pref', 'city', 'town']; // フィールド名を適切に設定
 }
