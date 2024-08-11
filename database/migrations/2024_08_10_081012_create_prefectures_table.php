@@ -14,7 +14,7 @@ class CreatePrefecturesTable extends Migration
     public function up()
     {
         Schema::create('prefectures', function (Blueprint $table) {
-            $table->integer('id');
+            $table->id();
             $table->string('prefectures');
             $table->unsignedBigInteger('region_id'); // 外部キーとして設定するカラム
 

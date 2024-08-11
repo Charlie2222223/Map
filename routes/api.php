@@ -16,8 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\RandomTravelController;
 
-Route::get('/random-search', [RandomTravelController::class, 'getRandomData']);
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/get-random-data', [RandomTravelController::class, 'getRandomData']);
